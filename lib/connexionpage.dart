@@ -4,8 +4,8 @@ import 'delayed_animation.dart';
 import 'login_page.dart';
 import 'signup_page.dart';
 import 'main.dart';
-class ChosePage extends StatelessWidget {
 
+class ChosePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,9 +17,9 @@ class ChosePage extends StatelessWidget {
           icon: Icon(
             Icons.arrow_back,
             color: Colors.black,
-            size:30,
+            size: 30,
           ),
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
         ),
@@ -27,13 +27,15 @@ class ChosePage extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            DelayedAnimation(delay: 1000,
+            DelayedAnimation(
+              delay: 1000,
               child: Container(
                 height: 280,
                 child: Image.asset('images/cool.jpg'),
               ),
             ),
-            DelayedAnimation(delay: 1000,
+            DelayedAnimation(
+              delay: 1000,
               child: Container(
                 margin: const EdgeInsets.symmetric(
                   vertical: 40,
@@ -62,7 +64,8 @@ class ChosePage extends StatelessWidget {
                 ),
               ),
             ),
-            DelayedAnimation(delay: 2000,
+            DelayedAnimation(
+              delay: 2000,
               child: Container(
                 margin: EdgeInsets.symmetric(
                   vertical: 14,
@@ -72,7 +75,8 @@ class ChosePage extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
+                        Navigator.push(
+                          context,
                           MaterialPageRoute(
                             builder: (context) => LoginPage(),
                           ),
@@ -86,10 +90,13 @@ class ChosePage extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.mail_outline_outlined,
-                            color: Colors.black,),
+                          Icon(
+                            Icons.mail_outline_outlined,
+                            color: Colors.black,
+                          ),
                           SizedBox(width: 10),
-                          Text("Se connecter",
+                          Text(
+                            "Se connecter",
                             style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontSize: 16,
@@ -99,11 +106,11 @@ class ChosePage extends StatelessWidget {
                         ],
                       ),
                     ),
-
                     SizedBox(height: 50),
                     ElevatedButton(
                       onPressed: () {
-                        Navigator.push(context,
+                        Navigator.push(
+                          context,
                           MaterialPageRoute(
                             builder: (context) => SignupPage(),
                           ),
@@ -117,10 +124,13 @@ class ChosePage extends StatelessWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.account_circle_outlined,
-                            color: Colors.black,),
+                          Icon(
+                            Icons.account_circle_outlined,
+                            color: Colors.black,
+                          ),
                           SizedBox(width: 10),
-                          Text("S'inscrire",
+                          Text(
+                            "S'inscrire",
                             style: GoogleFonts.poppins(
                               color: Colors.black,
                               fontSize: 16,
@@ -130,13 +140,11 @@ class ChosePage extends StatelessWidget {
                         ],
                       ),
                     ),
-
                   ],
                 ),
               ),
             ),
           ],
-
         ),
       ),
     );
